@@ -1,0 +1,174 @@
+@import '../variables.scss';
+
+@media screen and (min-width: 768px) {
+	.product {
+		padding: 55px 0 95px;
+
+		// .product__inner-wrap
+		&__inner-wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: stretch;
+		}
+	}
+
+	.product-images {
+		flex: 0 0 570 / 1170 * 100%;
+
+		// .product-images__top
+		&__top {
+			display: flex;
+			align-items: stretch;
+		}
+
+		// .product-images__side-imgs
+		&__side-imgs {
+			display: block;
+			flex: 0 0 92 / 570 * 100%;
+			margin: 0 9px 0 0;
+		}
+
+		// .product-images__mini-img
+		&__mini-img {
+			display: block;
+			width: 100%;
+			border: 1px solid $golden;
+			border-radius: 4px;
+			margin: 0 0 10px 0;
+		}
+
+		// .product-images__main-img
+		&__main-img {
+			flex: 1 0;
+			& > img {
+				width: 100%;
+			}
+		}
+
+			// .product-images__bttm
+		&__bttm {
+			display: block;
+		}
+
+		// .product-images__share
+		&__share {
+			margin: 0 0 1em 0;
+			font-family: $ceraPro;
+			font-size: 16px;
+			color: $lightGrey
+		}
+
+		// .product-images__socials
+		&__socials {
+			max-width: 176px;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		// .product-images__socials-item
+		&__socials-item {
+			list-style-type: none;
+		}
+		&__socials-link {
+			display: block;
+			width: 28px;
+			height: 28px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #000;
+			border-radius: 50%;
+
+			& > span {
+				color: #fff;
+			}
+
+			// .product-images__socials-link_facebook
+			&_facebook {
+				background-color: $facebook;
+			}
+	
+			// .product-images__socials-link_twitter
+			&_twitter {
+				background-color: $twitter;
+			}
+	
+			// .product-images__socials-link_vk
+			&_vk {
+				background-color: $vk;
+			}
+	
+			// .product-images__socials-link_pinterest
+			&_pinterest {
+				background-color: $pinterest;
+			}
+	
+			// .product-images__socials-link_odnoklassniki
+			&_odnoklassniki {
+				background-color: $odnoklassniki;
+			}
+		}
+	}
+
+	.product-info {
+		flex: 0 0 452 / 1170 * 100%;
+		padding: 0 25px 0 0;
+		display: flex;
+		flex-direction: column;
+		// .product-info__name
+		&__name {
+			order: 0;
+		}
+
+		// .product-info__weight
+		&__weight {
+			order: 1;
+			margin: 0 0 45px 0;
+		}
+
+		// .product-info__capacity-wrap
+		&__capacity-wrap {
+			order: 2;
+			margin: 0 0 25px 0;
+		}
+
+		// .product-info__price-wrap
+		&__price-wrap  {
+			order: 3;
+		}
+
+		&__order-wrap {
+			order: 4;
+			margin: 0 0 65px 0;
+		}
+
+		&__delivery {
+			order: 5;
+			margin: 0 0 50px 0;
+		}
+
+		&__delivery-info {
+			order: 6;
+		}
+
+		// .product-info__order-btn
+		&__order-btn {
+			order: 1;
+			flex: 0 0 254 / 452 * 100%;
+		}
+
+		&__order-one-click {
+			order: 2;
+			flex: 0 0 185 / 452 * 100%;
+			margin: 0;
+		}
+
+		// .product-info__order-amount
+		&__order-amount {
+			order: 3;
+		}
+	}
+}

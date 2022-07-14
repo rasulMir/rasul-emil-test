@@ -1,0 +1,126 @@
+@import '../variables.scss';
+
+@media screen and (min-width: 767px) {
+
+	.head-logo {
+		width: 189px;
+	}
+
+	.head-top {
+		display: block;
+		padding: 10px 0;
+		background-color: $lightGreen;
+		color: #FFFFFF;
+		// .head-top__inner-wrap
+		&__inner-wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	
+		// .head-top__map
+		&__map {
+			&::before {
+				content: "\e906";
+				font-family: 'icomoon' !important;
+				color: inherit;
+			}
+		}
+	
+		// .head-top__link
+		&__link {
+			font-family: $ceraPro;
+			font-weight: 400;
+			font-size: 16px;
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background-color: #fff;
+				border-radius: 3px;
+				transform-origin: left;
+				transform: scaleX(0);
+				transition: all .3s linear;
+			}
+	
+			&:hover {
+				&::before {
+					transform: scaleX(1);
+				}
+			}
+		}
+	
+		// .head-top__contacts
+		&__contacts {
+			& > .head-top__link:not(:last-child) {
+				padding: 0 40px 0 0;
+			}
+		}
+	}
+
+	.head-nav {
+		&__inner-wrap {
+			padding: 21px 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__mobile-icon {
+			display: none;
+		}
+		&__menu-icon {
+			display: none;
+		}
+		&__menu {
+			position: static;
+			width: auto;
+			height: auto;
+		}
+
+		// .head-nav__list
+		&__list {
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		// .head-nav__link
+		&__link {
+			position: relative;
+		}
+		
+		// .head-nav__desctop-icons
+		&__desctop-icons {
+			flex: 0 0 140 / 1170 * 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		// .head-nav__desctop-icon
+		&__desctop-icon {
+			color: $green;
+			font-size: 21px;
+		}
+
+		
+	&__icon-cart_amount {
+		left: 50%;
+	}
+	}
+}
+
+@media screen and (min-width: 1170px) {
+	.head-nav {
+		&__menu {
+			flex: 0 0 600 / 1170 * 100%;
+		}
+	}
+} 

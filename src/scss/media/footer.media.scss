@@ -1,0 +1,95 @@
+@import '../variables.scss';
+
+
+@media screen and (min-width: 768px) {
+	.footer {
+		padding: 95px 0;
+		// .footer__item
+		&__item {
+			flex: 0 0 290px;
+			&:not(:last-child) {
+				margin: 0;
+			}
+		}
+
+		// .footer__contacts
+		&__contacts {
+			display: block;	
+		}
+
+		&__cedri {
+			display: block;
+
+			& > li:nth-child(9) {
+				margin: 0;
+			}
+			& > li:nth-child(n+9) {
+				text-align: left;
+			}
+		}
+
+
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.footer {
+		position: relative;
+		
+		&__socials-list {
+			position: absolute;
+			bottom: 210px;
+			right: 363px;
+			width: 180px;
+
+			& > li {
+				list-style-type: none;
+				margin: 7.5px 0;
+			}
+		}
+
+		// .footer__socials-item
+		&__socials-item {
+			width: 48px;
+			height: 48px;
+			font-size: 30px;
+		}
+
+		// .footer__logo
+		&__logo {
+			position: absolute;
+			bottom: 214px;
+			right: 0;
+			width: 290px;
+			display: flex;
+			align-items: center;
+
+			& > span {
+				display: inline;
+			}
+		}
+
+		// .footer__logo-txt
+		&__logo-txt {
+			font-size: 30px;
+			padding: 0 0 0 20px;
+		}
+
+		&__coopyright-txt {
+			position: absolute;
+			bottom: 120px;
+			left: 0;
+			width: 100%;
+		}
+
+		// .footer__item
+		&__item {
+			flex: 0 0 23%;
+			&:not(:last-child) {
+				margin: 0;
+			}
+		}
+
+
+	}
+}

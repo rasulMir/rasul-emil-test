@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+@media screen and (min-width: 768px) {
+	.subscribe {
+		background-image: url('../images/form-bg.jpg');
+		background-position: 40%;
+	
+		// .subscribe__inner-wrap
+		&__inner-wrap {
+			display: flex;
+		}
+	}
+
+	.subscribe-form  {
+		flex: 0 0 535 / 1170 * 100%;
+
+		// .subscribe-form__title
+		&__title {
+			margin: 0 0 20px 0;
+		}
+
+		// .subscribe-form__inp
+		&__inp {
+			margin: 10px 0 40px 0;
+		}
+
+		// .subscribe-form__btn
+		&__btn {
+			width: 50%;
+			margin: 0 0 15px 0;
+		}
+	}
+}
