@@ -114,8 +114,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		sortItems.forEach(i => {
 			i.addEventListener('click', (e: MouseEvent) => {
-				sortBtn.textContent = e.target?.textContent
-				sortList.classList.remove('reviews-sort__list_active')
+				if (e.target instanceof HTMLElement) {
+					sortBtn.textContent = e.target?.textContent
+					sortList.classList.remove('reviews-sort__list_active')
+				}
 			})
 		})
 		
